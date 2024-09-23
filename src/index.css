@@ -723,6 +723,24 @@ Contact Page
     max-width: 400px;
   }
 
+  .search__results--title {
+  margin-top: 36px;
+  font-size: 12px;
+  }
+
+  .back__btn {
+    display: none;
+  }
+
+  .filter__box {
+    display: none;
+  }
+
+  
+  .search__results--container {
+    padding: 0;
+  }
+
   .event__info--img--container {
     margin-right: 0;
   }
@@ -744,6 +762,10 @@ Contact Page
   .nav__btn--menu {
     display: block;
     margin-right: 24px;
+  }
+
+  .back__btn {
+    display: none;
   }
   .nav__links--list {
     display: none;
