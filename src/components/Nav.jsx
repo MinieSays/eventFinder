@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { logo } from "../assets/index";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Nav = () => {
 const [isOpen, setIsOpen] = useState(false)
+
+
+
+useEffect(() => {
+
+})
 
   return (
     <nav>
@@ -33,13 +39,13 @@ const [isOpen, setIsOpen] = useState(false)
             </button>
               <ul className="menu__list">
                 <li className="menu__list--item">
-                  <Link to={"/"} className="menu__link">Home</Link>
+                  <Link to={"/"} onClick={() => setIsOpen(!isOpen)}  className="menu__link">Home</Link>
                 </li>
                 <li className="menu__list--item">
-                  <Link to={"/"} className="menu__link">Search Events</Link>
+                  <Link to={"/"} onClick={() => setIsOpen(!isOpen)} className="menu__link">Search Events</Link>
                 </li>
                 <li className="menu__list--item">
-                  <Link to={"/contact"} className="menu__link">Contact</Link>
+                  <Link to={"/contact"} onClick={() => setIsOpen(!isOpen)} className="menu__link">Contact</Link>
                 </li>
               </ul>
           </div>

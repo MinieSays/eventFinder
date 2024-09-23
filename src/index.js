@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheckSquare, faCoffee, faMagnifyingGlass, faSpinner, faPhone, faEnvelope, faLocationDot, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faMagnifyingGlass, faSpinner, faPhone, faEnvelope, faLocationDot, faBars, faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
-library.add( faCheckSquare, faCoffee, faMagnifyingGlass, faSpinner, faPhone, faEnvelope, faLocationDot, faBars, faTimes)
+library.add( faCheckSquare, faCoffee, faMagnifyingGlass, faSpinner, faPhone, faEnvelope, faLocationDot, faBars, faTimes, faArrowLeft)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

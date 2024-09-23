@@ -1,8 +1,6 @@
 import { React } from "react";
 import SearchHeader from "./SearchHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "react-router-dom";
-import { iconOne, iconThree, iconTwo } from "../assets";
 import SearchBar from "../UI/SearchBar";
 
 const Home = ({ search, setSearch, setLoading, loading }) => {

@@ -25,7 +25,7 @@ function App() {
             element={<Home search={search} setSearch={setSearch} setLoading={setLoading} loading={loading} />}
           />
           <Route path="search/:search" element={<SearchResults events={events} setEvents={setEvents} setLoading={setLoading} setShowFilter={setShowFilter} showFilter={showFilter} hover={hover} setHover={setHover} sortBy={sortBy} setSortBy={setSortBy}  />} />
-          <Route path="search/:search/:id" element={<EventInfo />} />
+          <Route path="search/:search/:id" element={<EventInfo search={search} />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
       </Router>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Events = ({
   sortBy,
@@ -22,7 +23,11 @@ const Events = ({
 
   return (
     <>
-      <div className="container">
+
+      <div className="search__results--container">
+        <Link to={`/`}>
+        <FontAwesomeIcon icon="arrow-left" className="back__btn" />
+        </Link>
         <div className="row event__row">
           <div className="filter__container">
             <h1 className="search__results--title">
@@ -102,28 +107,7 @@ const Events = ({
                           : null}
                       </div>
                       <h1 className="event__title">{event.name || null}</h1>
-                      <div className="event__price--date">
-                        <div className="event__date--container">
-                          <p className="event__date">Date</p>
-                          <p> {event.dates.start.localDate}</p>
-                        </div>
-                        <div className="event__price--container">
-                          <p className="event__price">Price:</p>
-                          <p className="event__pricing">
-                            {event.priceRanges
-                              ? event.priceRanges.map((price, i) => (
-                                  <span key={i}>
-                                    $
-                                    {price.min === 0
-                                      ? "Not Applicable"
-                                      : price.min}{" "}
-                                    - ${price.max === 0 ? "" : price.max}
-                                  </span>
-                                ))
-                              : "N/A"}
-                          </p>
-                        </div>
-                      </div>
+                      <div className="event__price--date"></div>
                     </div>
                   </div>
                 ))}
@@ -143,8 +127,3 @@ const Events = ({
 };
 
 export default Events;
-//   event._embedded.venues.map((venu, i) => (
-//     <p className="event__venues--title" key={i}>
-//       {venu.name || null}
-//     </p>
-//   ))
